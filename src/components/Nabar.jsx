@@ -13,6 +13,9 @@ function Navbar() {
                 <li>
                     <NavLink to="/contacts">Contatti</NavLink>
                 </li>
+                <li>
+                    <NavLink to="/post">Post</NavLink>
+                </li>
             </ul>
         </nav>
     );

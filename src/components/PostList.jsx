@@ -12,24 +12,18 @@ function PostList() {
     ];
 
     const { count } = useContext(CountContext);
-    const postsState = posts.map((post) => {
-        return {
-            ...post,
-            content: post.content.substring(0, 100) + '...',
-        };
-    });
 
     return (
         <div>
         <h2>Lista Post</h2>
         <ul>
-            {postsState.map((post) => (
-            <li key={post.id}>
-                <NavLink to={`/post/${post.id}`}>
-                    <p>{post.title}</p>
-                </NavLink>
-                { count }
-            </li>
+            {posts.map((post) => (
+                <li key={post.id}>
+                    <NavLink to={`/post/${post.id}`}>
+                        <p>{post.title}</p>
+                    </NavLink>
+                    {count}
+                </li>
             ))}
         </ul>
         </div>
